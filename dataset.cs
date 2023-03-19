@@ -1,4 +1,4 @@
-﻿//Amin Ahmadkhah
+//Amin Ahmadkhah
 
 using Microsoft.VisualBasic;
 
