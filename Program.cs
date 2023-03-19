@@ -10,12 +10,12 @@ LockKeyboard lk = new LockKeyboard();
 
 
 
+    Console.WriteLine("-----------------------------------------!!welcome to the Digikala dataset!!-----------------------------------------");
 
 
-string s;
 do
 {
-    Console.WriteLine("-----------------------------------------!!welcome to the Digikala dataset!!-----------------------------------------");
+
     Console.WriteLine("1) If you want to see SumSalesByYear preess 1!!");
     Console.WriteLine("2) If you want to see SumSalesByCity preess 2!!");
     Console.WriteLine("3) If you want to see SumSalesByItem preess 3!!");
@@ -69,28 +69,5 @@ do
             break;
     }
 
-    continuewithlock();
-} while (s.ToLower() == "y");
-
-
-
-
-
-
-
-
-
-
-
-void continuewithlock()
-{
-    Console.WriteLine("Do you want to continue ???(y/n)");
-    do
-    {
-        s = Console.ReadKey(true).KeyChar.ToString();
-
-    } while (s.ToLower() != "y" && s.ToLower() != "n");
-}
-
-
+} while (lk.continuewithlock() == "y");
 
