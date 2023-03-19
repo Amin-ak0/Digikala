@@ -1,4 +1,4 @@
-﻿// Amin Ahmadkhah       
+﻿// Amin Ahmadkhah       /       
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +27,7 @@ namespace digidata.Operation
         {
             List<int> sales = AllSalesByYear(year);
             long total = 0;
-            foreach(int sale in sales)
+            foreach (int sale in sales)
             {
                 total += sale;
             }
@@ -36,12 +36,12 @@ namespace digidata.Operation
         private List<int> AllSalesByCity(string city)
         {
             return digikalas.
-                Where(x=>x.city_name_fa==city)
-                .Select(x=>x.Amount_Gross_Order).ToList();
+                Where(x => x.city_name_fa == city)
+                .Select(x => x.Amount_Gross_Order).ToList();
         }
         public long SumSalesByCity(string city)
         {
-            List<int > sales =AllSalesByCity(city);
+            List<int> sales = AllSalesByCity(city);
             long total = 0;
 
             foreach (int sale in sales)
@@ -57,15 +57,22 @@ namespace digidata.Operation
                 .Select(x => x.Amount_Gross_Order)
                 .ToList();
         }
-        public long SumSalesByItem (int item)
+        public long SumSalesByItem(int item)
         {
             List<int> sales = AllSalesByItem(item);
             long total = 0;
             foreach (int sale in sales)
             {
-                total+= sale;
+                total += sale;
             }
             return total;
         }
+        //public List<int> SortAndCreateFolder(string folder)
+        //{
+        //    return digikalas.
+        //        Where(x => x.city_name_fa == folder)
+        //        .Select(x => x .ID_Item).Select(x => x.Amount_Gross_)
+        //        .ToList();
+        //}
     }
 }
